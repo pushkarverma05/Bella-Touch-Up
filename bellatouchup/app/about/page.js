@@ -1,55 +1,10 @@
 import Link from 'next/link';
+import NavBar from '../components/NavBar';
 
 export default function AboutPage() {
     return (
         <div className="bg-black min-h-screen">
-            <div className="bg-black py-10 px-20">
-                {/* Desktop Navbar */}
-                <ul className="hidden md:flex font-bold items-center gap-6 text-white tracking-wider text-5xl cursor-pointer justify-between">
-                    <li>
-                        <Link href="/">BELLA TOUCH UP</Link>
-                    </li>
-                    <ul className="flex h-full font-extralight items-center gap-6 text-white tracking-wider text-2xl cursor-pointer">
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link active:" href="/gallery">
-                                GALLERIES
-                            </Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/about">
-                                ABOUT
-                            </Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/contact">
-                                CONTACT
-                            </Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/">
-                                HOME
-                            </Link>
-                        </li>
-                    </ul>
-                </ul>
-                {/* Mobile Navbar */}
-                <div className="flex items-center justify-center md:hidden">
-                    <div className="md:hidden flex h-full font-bold items-center gap-6 text-white tracking-wider text-5xl cursor-pointer justify-center py-10">
-                        <h1>BELLA TOUCH UP</h1>
-                    </div>
-                </div>
-                <div className="flex items-center justify-center md:hidden">
-                    <div>
-                        <img
-                            src="/list.svg"
-                            alt=""
-                            width={34}
-                            height={34}
-                            className="cursor-pointer invert"
-                        />
-                    </div>
-                </div>
-            </div>
+            <NavBar/>
             <div className="p-20">
                 <h1 className="flex items-center justify-center text-white font-bold tracking-wider text-5xl p-10">
                     ABOUT

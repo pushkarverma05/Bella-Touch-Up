@@ -1,53 +1,21 @@
 // app/contact/page.js
 import Image from 'next/image';
 import Link from 'next/link';
-
+import NavBar from '../components/NavBar';
 export default function Contact() {
     return (
         <div className="bg-black min-h-screen">
-            <div className="bg-black py-10 px-20">
-                {/* Desktop Navbar */}
-                <ul className="hidden md:flex font-bold items-center gap-6 text-white tracking-wider text-5xl cursor-pointer justify-between">
-                    <li>
-                        <Link href="/">BELLA TOUCH UP</Link>
-                    </li>
-                    <ul className="flex h-full font-extralight items-center gap-6 text-white tracking-wider text-2xl cursor-pointer">
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/gallery">GALLERIES</Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/about">ABOUT</Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/contact">CONTACT</Link>
-                        </li>
-                        <li className="hover:text-purple-300">
-                            <Link className="nav-link" href="/">HOME</Link>
-                        </li>
-                    </ul>
-                </ul>
-                {/* Mobile Navbar */}
-                <div className="flex items-center justify-center md:hidden">
-                    <div className="md:hidden flex h-full font-bold items-center gap-6 text-white tracking-wider text-5xl cursor-pointer justify-center py-10">
-                        <h1>BELLA TOUCH UP</h1>
-                    </div>
-                </div>
-                <div className="flex items-center justify-center md:hidden">
-                    <div>
-                        <Image src="/list.svg" alt="" width={34} height={34} className="cursor-pointer invert" />
-                    </div>
-                </div>
-            </div>
+            <NavBar/>
             <div className="p-20">
                 <h1 className="md:hidden flex items-center justify-center text-white font-bold tracking-wider text-5xl">CONTACT</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 mx-10">
-                <div className="px-6 md:py-0 min-h-[60vh] flex items-center justify-center">
-                    <div className="w-full h-[600px] flex items-center justify-center overflow-hidden">
-                        <Image alt="Portrait" src="/img.png" width={400} height={600} style={{objectFit: 'contain'}} priority />
+                <div className="px-10 md:py-0 min-h-[60vh] flex items-center justify-center">
+                    <div className="w-full h-[500px] relative overflow-hidden">
+                        <img alt="Portrait" src="/img.png" style={{objectFit: 'contain'}} className='h-full w-full object-cover' priority />
                     </div>
                 </div>
-                <div className="md:h-full pt-10 md:pt-0">
+                <div className="md:h-full py-20 md:pt-0"> 
                     <h1 className="hidden md:flex pt-0 items-center justify-center text-white font-bold tracking-wider text-5xl p-10">CONTACT</h1>
                     <ul className="flex items-center justify-center gap-6 w-full invert">
                         <li>
