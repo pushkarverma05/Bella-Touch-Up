@@ -12,7 +12,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 mx-10">
                 <div className="px-10 md:py-0 min-h-[60vh] flex items-center justify-center">
                     <div className="w-full h-[500px] relative overflow-hidden">
-                        <img alt="Portrait" src="/img.png" style={{objectFit: 'contain'}} className='h-full w-full object-cover' priority />
+                        <img alt="Portrait" src="/img.png" style={{objectFit: 'contain'}} className='h-full w-full object-cover'/>
                     </div>
                 </div>
                 <div className="md:h-full py-20 md:pt-0"> 
