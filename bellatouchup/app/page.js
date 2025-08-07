@@ -5,8 +5,9 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <div
-            className="h-[100vh] bg-cover bg-center"
+            className="h-[100vh] bg-cover bg-center animate-fadeIn"
             style={{ backgroundImage: "url('/sv.jpg')" }}
+            
         >
             <div className="top-[45%] px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 relative">
                 {/* Mobile Menu */}

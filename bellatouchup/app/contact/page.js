@@ -1,18 +1,26 @@
+"use client"
 // app/contact/page.js
 import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';
+import { motion } from 'framer-motion'
 export default function Contact() {
     return (
         <div className="bg-black min-h-screen">
             <NavBar/>
+            <motion.div
+            className="bg-black min-h-screen"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5 }} // adjust timing as you like
+        >
             <div className="p-20">
                 <h1 className="md:hidden flex items-center justify-center text-white font-bold tracking-wider text-5xl">CONTACT</h1>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 mx-10">
                 <div className="px-10 md:py-0 min-h-[60vh] flex items-center justify-center">
                     <div className="w-full h-[500px] relative overflow-hidden">
-                        <img alt="Portrait" src="/img.png" style={{objectFit: 'contain'}} className='h-full w-full object-cover'/>
+                        <img alt="Portrait" src="/img.png" style={{objectFit: 'contain'}} className='h-full w-full object-cover'p/>
                     </div>
                 </div>
                 <div className="md:h-full py-20 md:pt-0"> 
@@ -50,6 +58,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            </motion.div>
         </div>
     );
 }
