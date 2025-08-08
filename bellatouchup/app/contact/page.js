@@ -1,19 +1,13 @@
-"use client"
 // app/contact/page.js
 import Image from 'next/image';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';
-import { motion } from 'framer-motion'
+import  Animatelayout from '../components/AnimateLayout'
 export default function Contact() {
     return (
+        <Animatelayout>
         <div className="bg-black min-h-screen">
             <NavBar/>
-            <motion.div
-            className="bg-black min-h-screen"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }} // adjust timing as you like
-        >
             <div className="p-20">
                 <h1 className="md:hidden flex items-center justify-center text-white font-bold tracking-wider text-5xl">CONTACT</h1>
             </div>
@@ -58,7 +52,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            </motion.div>
         </div>
+        </Animatelayout>
     );
 }

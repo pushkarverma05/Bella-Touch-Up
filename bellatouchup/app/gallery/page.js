@@ -1,25 +1,17 @@
-'use client'
 // app/gallery/page.js (for Next.js 13+ app directory)
 // or pages/gallery.js (for pages directory)
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import NavBar from '../components/NavBar'
-import { use } from 'react'
+import  Animatelayout from '../components/AnimateLayout'
 
 const images = Array.from({ length: 18 }, (_, i) => `/grid-photos/img${i + 1}.jpg`)
 
 export default function Gallery() {
     return (
+        <Animatelayout>
          <div className="bg-black min-h-screen overflow-hidden">
             <NavBar/>
-        <motion.div
-            className="bg-black min-h-screen"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }} // adjust timing as you like
-        >
-       
                 <div className="p-20">
                     <h1 className="flex items-center justify-center text-white font-bold tracking-wider text-5xl p-10">GALLERY</h1>
                     <p className="flex items-center justify-center text-white tracking-wider">
@@ -56,7 +48,7 @@ export default function Gallery() {
                         </div>
                     ))}
                 </div>
-        </motion.div>
             </div>
+            </Animatelayout>
     )
 }

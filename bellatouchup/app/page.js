@@ -1,9 +1,11 @@
 // app/page.js or pages/index.js
 import Image from 'next/image';
 import Link from 'next/link';
+import  Animatelayout from './components/AnimateLayout';
 
 export default function Home() {
     return (
+        <Animatelayout>
         <div
             className="h-[100vh] bg-cover bg-center animate-fadeIn"
             style={{ backgroundImage: "url('/sv.jpg')" }}
@@ -69,5 +71,6 @@ export default function Home() {
                 </ul>
             </div>
         </div>
+        </Animatelayout>
     );
 }
